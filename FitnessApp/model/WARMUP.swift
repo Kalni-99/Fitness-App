@@ -2,7 +2,7 @@
 //  WARMUP.swift
 //  FitnessApp
 //
-//  Created by Mac on 2024-11-11.
+//  Created by Kalani Kapuduwa on 2024-11-11.
 //
 
 import Firebase

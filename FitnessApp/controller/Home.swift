@@ -2,7 +2,7 @@
 //  Landing.swift
 //  FitnessApp
 //
-//  Created by Mac on 2024-11-16.
+//  Created by Kalani Kapuduwa on 2024-11-16.
 //
 
 import UIKit

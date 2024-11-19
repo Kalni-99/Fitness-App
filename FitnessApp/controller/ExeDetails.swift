@@ -2,7 +2,7 @@
 //  ExeDetails.swift
 //  FitnessApp
 //
-//  Created by Mac on 2024-11-15.
+//  Created by Kalani Kapuduwa on 2024-11-15.
 //
 
 import UIKit

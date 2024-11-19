@@ -2,7 +2,7 @@
 //  PrevWeight.swift
 //  FitnessApp
 //
-//  Created by Mac on 2024-11-13.
+//  Created by Kalani Kapuduwa on 2024-11-13.
 //
 
 import UIKit
@@ -169,7 +169,11 @@ class PrevWeight: UIViewController {
         weightTxt.autocorrectionType = .no
         weightTxt.layer.borderWidth = 1.5
         weightTxt.layer.borderColor = UIColor.white.cgColor
-        weightTxt.placeholder = "00"
+        //weightTxt.placeholder = "00"
+        weightTxt.attributedPlaceholder = NSAttributedString(
+            string: "00",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
         weightTxt.autocapitalizationType = .none
         weightTxt.textColor = .white
         weightTxt.textAlignment = .center

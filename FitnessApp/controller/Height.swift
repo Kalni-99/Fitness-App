@@ -2,7 +2,7 @@
 //  Height.swift
 //  FitnessApp
 //
-//  Created by Mac on 2024-11-13.
+//  Created by Kalani Kapuduwa on 2024-11-13.
 //
 
 
@@ -175,7 +175,11 @@ class Height: UIViewController {
         heightTxt.autocorrectionType = .no
         heightTxt.layer.borderWidth = 1.5
         heightTxt.layer.borderColor = UIColor.white.cgColor
-        heightTxt.placeholder = "00"
+        //heightTxt.placeholder = "00"
+        heightTxt.attributedPlaceholder = NSAttributedString(
+            string: "00",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
         heightTxt.autocapitalizationType = .none
         heightTxt.textColor = .white
         heightTxt.textAlignment = .center

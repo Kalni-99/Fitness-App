@@ -2,7 +2,7 @@
 //  Username.swift
 //  FitnessApp
 //
-//  Created by Mac on 2024-11-16.
+//  Created by Kalani Kapuduwa on 2024-11-16.
 //
 
 import UIKit
@@ -106,7 +106,11 @@ class Username: UIViewController {
         userTxt.autocorrectionType = .no
         userTxt.layer.borderWidth = 1.5
         userTxt.layer.borderColor = UIColor.white.cgColor
-        userTxt.placeholder = "Username"
+        //userTxt.placeholder = "Username"
+        userTxt.attributedPlaceholder = NSAttributedString(
+            string: "Username",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
         userTxt.autocapitalizationType = .none
         userTxt.textColor = .white
         userTxt.textAlignment = .center
