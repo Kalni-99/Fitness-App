@@ -136,7 +136,11 @@ class NotifyVC: UIViewController
         textField.textColor = .white
         textField.textAlignment = .center
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Enter Reminder"
+        //textField.placeholder = "Enter Reminder"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Enter Reminder",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
         textField.layer.cornerRadius = 20
         return textField
     }()
@@ -151,7 +155,11 @@ class NotifyVC: UIViewController
         textField.textColor = .white
         textField.textAlignment = .center
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Enter Body"
+        //textField.placeholder = "Enter Body"
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Enter Body",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
         textField.layer.cornerRadius = 20
         return textField
     }()
@@ -165,7 +173,7 @@ class NotifyVC: UIViewController
         button.layer.backgroundColor = UIColor.orange.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 20
-        button.setTitle("Add Reminder", for: .normal)
+        button.setTitle("Add Reminder", for: .normal )
         button.addTarget(self, action: #selector(scheduleAction), for: .touchUpInside)
         return button
     }()
@@ -1029,7 +1037,7 @@ class Landing: UIViewController {
             
             
             let durationLabel = UILabel()
-            durationLabel.text = "duration: \(warm.exe_hours)"
+            durationLabel.text = "duration: \(warm.exe_seconds)"
             durationLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .medium)
             stackView.addArrangedSubview(durationLabel)
             

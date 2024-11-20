@@ -87,42 +87,42 @@ class ExeDetails: UIViewController {
         //let burned_cal : String
         
         let doneExercise = exeName.text
-        if(doneExercise == "Pull ups"){
+        if(doneExercise == "High Knees"){
             getCaloies(val: 5)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "Push ups"){
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Push Ups"){
             getCaloies(val: 6)
-            getHours(val1: warmUp.exe_hours)
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Crunches"){
+            getCaloies(val: 8)
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Lunges"){
+            getCaloies(val: 4)
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Jumping Jacks"){
+            getCaloies(val: 2)
+            getHours(val1: warmUp.exe_seconds)
         }else if(doneExercise == "Squats"){
             getCaloies(val: 7)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "Barbel curl"){
-            getCaloies(val: 8)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "Chin ups"){
-            getCaloies(val: 4)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "Bar Preacher Curl"){
-            getCaloies(val: 2)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "Hammer Curl"){
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Bicycle Crunch"){
             getCaloies(val: 1)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "Dumbbell Curl"){
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Jump Squats"){
             getCaloies(val: 3)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "Cardio"){
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Butt Kickers"){
             getCaloies(val: 4)
-            getHours(val1: warmUp.exe_hours)
+            getHours(val1: warmUp.exe_seconds)
         }else if(doneExercise == "Knee tucks"){
             getCaloies(val: 2)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "crow stand"){
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Shoulder Taps"){
             getCaloies(val: 1)
-            getHours(val1: warmUp.exe_hours)
-        }else if(doneExercise == "Inchworm"){
+            getHours(val1: warmUp.exe_seconds)
+        }else if(doneExercise == "Up Down Plank"){
             getCaloies(val: 3)
-            getHours(val1: warmUp.exe_hours)
+            getHours(val1: warmUp.exe_seconds)
         }
         print(exeName.text as Any)
         //need to find out which is the exercise by reading lable text val
@@ -191,7 +191,7 @@ class ExeDetails: UIViewController {
 
             } else {
                 print("Document does not exist or there was an error: \(error?.localizedDescription ?? "Unknown error")")
-                let docRef = db.collection("user_exe_tbl").document(email!)
+                _ = db.collection("user_exe_tbl").document(email!)
             }
         }
     }
@@ -347,7 +347,7 @@ class ExeDetails: UIViewController {
         imageView.layer.cornerRadius = 20
         view.addSubview(imageView)*/
         let webView = WKWebView(frame: view.bounds)
-        webView.frame = CGRect(x: 0, y: 0, width: 400, height: 250)
+        webView.frame = CGRect(x: 0, y: 0, width: 400, height: 280)
         webView.layer.cornerRadius = 20
         view.addSubview(webView)
         
@@ -378,7 +378,7 @@ class ExeDetails: UIViewController {
             exeName.heightAnchor.constraint(equalToConstant: 40),
             exeName.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             ])
-        exeName.topAnchor.constraint(equalTo: view.topAnchor, constant: 250).isActive = true
+        exeName.topAnchor.constraint(equalTo: view.topAnchor, constant: 300).isActive = true
         
     }
     
@@ -398,12 +398,12 @@ class ExeDetails: UIViewController {
         NSLayoutConstraint.activate([
             
             exeDes.widthAnchor.constraint(equalToConstant: 370),
-            exeDes.heightAnchor.constraint(equalToConstant: 130),
+            exeDes.heightAnchor.constraint(equalToConstant: 200),
             //exeDes.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5),
             //exeDes.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 5),
             //exeDes.centerXAnchor.constraint(equalTo: view.centerXAnchor,constant: 10),
         ])
-        exeDes.topAnchor.constraint(equalTo: view.topAnchor, constant: 280).isActive = true
+        exeDes.topAnchor.constraint(equalTo: view.topAnchor, constant: 260).isActive = true
     }
     
     //sets container
