@@ -11,6 +11,7 @@ import FirebaseAuth
 import EventKit
 import UserNotifications
 import CoreMotion
+import SwiftUI
 
 class Home: UITabBarController {
 
@@ -838,6 +839,20 @@ class Landing: UIViewController {
         }
     }
     
+    @objc func backToFitness(){
+        do{
+            
+            
+            let healthView = Health() // Your SwiftUI View
+            let hostingController = UIHostingController(rootView: healthView) // Wrap it in a UIHostingController
+            self.navigationController?.pushViewController(hostingController, animated: true) // Push onto the navigation stack
+
+        }
+        catch{
+            print("An error occured !")
+        }
+    }
+    
     func addCardViews() {
         let scrollView = UIScrollView(frame: view.bounds)
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -909,9 +924,24 @@ class Landing: UIViewController {
         logoutButton.layer.borderWidth = 1
         logoutButton.layer.backgroundColor = UIColor.orange.cgColor
         logoutButton.layer.cornerRadius = 5.0
-        logoutButton.frame = CGRect(x: 270.0, y: 10, width: 85, height: 30.0)
+        logoutButton.frame = CGRect(x: 310.0, y: 10, width: 85, height: 30.0)
         logoutButton.addTarget(self, action: #selector(backToLogin), for: .touchUpInside)
         scrollView.addSubview(logoutButton)
+        yPosition += 0.0
+        
+        // Create a "logout" button
+        let fitnessButton = UIButton(type: .system)
+        fitnessButton.setTitle("Fitness", for: .normal)
+        fitnessButton.configuration = .gray()
+        fitnessButton.configuration?.baseForegroundColor = .black
+        fitnessButton.configuration?.cornerStyle = .medium
+        fitnessButton.layer.borderColor = UIColor.orange.cgColor
+        fitnessButton.layer.borderWidth = 1
+        fitnessButton.layer.backgroundColor = UIColor.orange.cgColor
+        fitnessButton.layer.cornerRadius = 5.0
+        fitnessButton.frame = CGRect(x: 200.0, y: 10, width: 85, height: 30.0)
+        fitnessButton.addTarget(self, action: #selector(backToFitness), for: .touchUpInside)
+        scrollView.addSubview(fitnessButton)
         yPosition += 0.0
         
         if(FirebaseAuth.Auth.auth().currentUser != nil){

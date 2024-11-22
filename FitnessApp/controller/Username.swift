@@ -109,7 +109,7 @@ class Username: UIViewController {
         //userTxt.placeholder = "Username"
         userTxt.attributedPlaceholder = NSAttributedString(
             string: "Username",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         )
         userTxt.autocapitalizationType = .none
         userTxt.textColor = .white
