@@ -229,9 +229,9 @@ class AftWeight: UIViewController {
     }
     
     func configureMotiLbl1(){
-        //motiLbl1.text = "I want to lose"
+        motiLbl1.text = "I want to lose"
         motiLbl1.textAlignment = .left
-        motiLbl1.textColor = .gray
+        motiLbl1.textColor = .lightGray
         motiLbl1.translatesAutoresizingMaskIntoConstraints = false
         
         setUpMoti1Lbl1()
@@ -251,7 +251,7 @@ class AftWeight: UIViewController {
     }
     
     func configureDifWeightTxt(){
-        //difWeightTxt.text = "8"
+        difWeightTxt.text = "8"
         difWeightTxt.textAlignment = .left
         difWeightTxt.textColor = .white
         difWeightTxt.translatesAutoresizingMaskIntoConstraints = false
@@ -273,9 +273,9 @@ class AftWeight: UIViewController {
     }
     
     func configureMotiLbl2(){
-        //motiLbl2.text = "kg from the current weight"
+        motiLbl2.text = "kg from the current weight"
         motiLbl2.textAlignment = .right
-        motiLbl2.textColor = .gray
+        motiLbl2.textColor = .lightGray
         motiLbl2.translatesAutoresizingMaskIntoConstraints = false
         
         setUpMoti1Lbl2()
